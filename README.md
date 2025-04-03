@@ -68,8 +68,9 @@ terraform init -reconfigure
 ```
 
 ## Best Practices
-- Use remote backend for state management.
+- Use remote backend for state files management.(for storing state files always use remote backend file u never store them in remote & local manchines or source control like github or bitbucket remote & local machines.)
 - Store sensitive data securely using AWS Secrets Manager or SSM.
+- Don't Manipulate the state files.(Always u have Read permissions for state file for suppose ur the owner of state file never ever mess with state file or rewrite the state file bcz Terraform don't understand it will again fix the AWS infrastructure again when some one is running it )
 - Implement Terraform modules for reusable infrastructure components.
 
 ## Contributing
